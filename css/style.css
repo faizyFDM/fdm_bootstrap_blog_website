@@ -19,7 +19,7 @@
 
 #recent_card{
     margin-bottom: 20px;
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
 }
 
@@ -30,4 +30,13 @@
 
 #nav_container{
     text-align: center;
+}
+
+#card-title{
+    margin-top: 50px;
+}
+
+#card-title span{
+    background: #0d6efd;
+    padding: 1em;
 }

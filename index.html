@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
         <div class="container-fluid">
-            <div class="navbar-collapse collapse" id="collapseNavbar">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapseNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="#" data-bs-target="#loginModal" data-bs-toggle="modal">Login</a>
@@ -47,11 +49,22 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary">Login</button>
                 </div>
             </div>
         </div>
@@ -64,11 +77,31 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">First Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Check Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary">Register</button>
                 </div>
             </div>
         </div>
@@ -76,11 +109,11 @@
     <div class="container-fluid p-5">
         <div id="house_background" class="container p-5">
             <img id="prof_img" src="./images/MV5BMTQxOTA1NDcyMV5BMl5BanBnXkFtZTgwNzA1MDM0MjE@._V1_.jpg" width="200px">
-            <h1 class="display-4">Meatwads Blogs</h1>
+            <h1 class="display-4">Meatwad's Blogs</h1>
         </div>
     </div>
     <div id="blog_container" class="row justify-content-around">
-        <div class="col-md-8">
+        <div class="col-md-8 col-sm-12">
             <h2>Blog Posts</h2>
             <div class="card mb-3">
                 <div class="row g-0">
@@ -194,46 +227,50 @@
             <div id="recent_card" class="card bg-dark text-white justify-content-center">
                 <img src="./images/88904771822_1223-large.jpeg" class="card-img" alt="..." height="150px">
                 <div class="card-img-overlay">
-                    <h5 class="card-title">Blog Title</h5>
+                    <h5 id="card-title" class="card-title"><span>Blog Title</span></h5>
                 </div>
             </div>
             <div id="recent_card" class="card bg-dark text-white">
                 <img src="./images/Aqua-Teen-Hunger-Force.webp" class="card-img" alt="..." height="150px">
                 <div class="card-img-overlay">
-                    <h5 class="card-title">Blog Title</h5>
+                    <h5 id="card-title" class="card-title"><span>Blog Title</span></h5>
                 </div>
             </div>
             <div id="recent_card" class="card bg-dark text-white">
                 <img src="./images/tumblr_p2m5ocTXRV1v78wfjo5_400.webp" class="card-img" alt="..." height="150px">
                 <div class="card-img-overlay">
-                    <h5 class="card-title">Blog Title</h5>
+                    <h5 id="card-title" class="card-title"><span>Blog Title</span></h5>
                 </div>
             </div>
             <h2>Most Popular</h2>
             <div id="recent_card" class="card bg-dark text-white">
                 <img src="./images/Aqua-Teen-Hunger-Force-theme-song.jpeg" class="card-img" alt="..." height="150px">
                 <div class="card-img-overlay">
-                    <h5 class="card-title">Blog Title</h5>
+                    <h5 id="card-title" class="card-title"><span>Blog Title</span></h5>
                 </div>
             </div>
             <div id="recent_card" class="card bg-dark text-white">
                 <img src="./images/yzyZgTPdoievyxBVkMAkbZ-320-80.png" class="card-img" alt="..." height="150px">
                 <div class="card-img-overlay">
-                    <h5 class="card-title">Blog Title</h5>
+                    <h5 id="card-title" class="card-title"><span>Blog Title</span></h5>
                 </div>
             </div>
         </div>
     </div>
-    <nav id="nav_container" class="navbar navbar-expand-md sticky-bottom navbar-dark bg-dark ms-auto ">
-        <div  class="container-fluid">
-          <a class="navbar-brand abs" href="#">Meatwads Blog</a>
+    <nav id="nav_container" class="navbar navbar-expand-md sticky-bottom navbar-dark bg-primary ms-auto ">
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="#">Meatwad's Blog</a>
         </div>
-      </nav>
+    </nav>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
         crossorigin="anonymous"></script>
